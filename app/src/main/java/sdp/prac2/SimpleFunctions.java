@@ -3,6 +3,46 @@ import java.util.*;
 
 public class SimpleFunctions {
     public SimpleFunctions() {}
+<<<<<<< HEAD
+    //Task 3
+    public static boolean Task3(String x){
+        int count = 0;
+        for (int i = 0; i < x.length(); i++){
+            char c = x.charAt(i);   
+            if (c == '('){
+                count++;
+            }else if(c == ')'){
+                count--;
+            }
+            if(count < 0){
+                return false; //closing brackets > opening brackets
+            }
+        }
+        return count == 0; // opening brackets = closing brackets
+    }
+    
+=======
+
+    public static List<Integer> tasksix(List<Integer> numbers){   //method name "tasksix"
+        List<Integer> roundednum = new ArrayList<>();     //A new arraylist is created
+        for (int num : numbers) {          //for loop goes through each number in provided integer list called "numbers"
+            roundednum.add(roundUp(num,100));  //this adds each new number that has been added to the new list
+        }
+        return roundednum;
+    }
+
+    private static int roundUp(int num, int divisor){
+        int remainder = num % divisor;
+
+        int roundedUp;     //new int variable
+        if (remainder > 0) {
+            roundedUp = num + (divisor - remainder) ;   //rounds up num to the highest multiple of divisor ex. roundednum = 213 + (100 - 13), roundednum = 300 which is divisible by 100
+        }else{
+            roundedUp = num;  //if number is divisble, 
+        }
+        return roundedUp;
+    }
+
     
     // Task 5
     public static <T extends Comparable<T>> boolean isSorted(List<T> list) {
@@ -31,4 +71,6 @@ public class SimpleFunctions {
 
         return finalResult;
     }
+>>>>>>> 1dd327500baf39547b81a57b7cd28167823719cd
 }
+
