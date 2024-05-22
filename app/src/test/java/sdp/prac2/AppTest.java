@@ -3,8 +3,26 @@
  */
 package sdp.prac2;
 
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
 
-class AppTest {
+public class AppTest {
+    
+
+    @Test 
+    public void testTask6(){
+        List<Integer> x = List.of(101,303,404,202,505);
+        List<Integer> result = List.of(200 ,400 , 500 , 300 , 600);
+        assertEquals(result , SimpleFunctions.Task6(x) , "Make sure function rounds up correctly");
+
+    }
+
+    @Test 
+    public void testTask6_2(){
+        List<Integer> x = List.of(100 , 200 , 300 ,576);
+        List<Integer> result = List.of(100 , 200 , 300 , 600);
+        assertEquals(result , SimpleFunctions.Task6(x) , "If a number is already a multiple it does not rounding");
+    }
 }
