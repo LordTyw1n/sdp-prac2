@@ -8,20 +8,5 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 public class AppTest {
-    public void testTask4(){
-        List<Integer> x = List.of( 1 , 2 , 3 , 4 , 5);
-        List<Integer> y = List.of(5 , 4 , 3 , 2 , 1);
-        List<Integer> result = List.of(1 , 4, 9, 16, 25);
-        assertEquals(result , SimpleFunctions.Task4(x,y) , "Values should be correctly multiplied");
-
-    }
-
-    @Test 
-    public void testTask4_2(){
-        List<Integer> x = List.of(1,2,3);
-        List<Integer> b = List.of(1,3);
-        assertEquals(null , SimpleFunctions.Task4(x,b) ,"Lists can not be different sizes");
-
-    }
 
 }

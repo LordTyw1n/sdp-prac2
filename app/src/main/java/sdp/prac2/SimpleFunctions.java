@@ -3,6 +3,8 @@ package sdp.prac2;
 import java.util.*;
 
 public class SimpleFunctions {
+    public SimpleFunctions() {}
+    //Task 3
     public static boolean Task3(String x){
         int count = 0;
         for (int i = 0; i < x.length(); i++){
@@ -18,5 +20,5 @@ public class SimpleFunctions {
         }
         return count == 0; // opening brackets = closing brackets
     }
-    public SimpleFunctions() {}
+    
 }
