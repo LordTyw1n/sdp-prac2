@@ -35,4 +35,18 @@ class AppTest {
         // Assert
         assertNull(result);
     }
+
+    @Test
+    public void testTask6(){
+        List<Integer> x = List.of(101,303,404,202,505);
+        List<Integer> result = List.of(200,400,500,300,600);
+        assertEquals(result , SimpleFunctions.tasksix(x), "Make sure function rounds up correctly");
+    }
+
+    @Test 
+    public void testTask6_2(){
+        List<Integer> x = List.of(100,200,300,567);
+        List<Integer> result = List.of(100,200,300,600);
+        assertEquals(result, SimpleFunctions.tasksix(x), "If a number is already a multiple, it does not round up");
+    }
 }
